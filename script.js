@@ -1,8 +1,19 @@
-function firstWord(str) {
-    
-    const firstSpaceIndex = str.indexOf(" "); // Find the index of the first space
-    return firstSpaceIndex === -1 ? str : str.slice(0, firstSpaceIndex); // Return the entire string or up to the first space
+function firstWord(s) {
+	let str=s.trim();
+	if(str.length==0)
+		return str;
+	let res="";
+	for(let i=0;i<str.length;i++){
+		if(str[i]==" ")
+			break;
+		else
+			res+=str[i];
+	}
+	return res;
+  // your code here
 }
+
+// Do not change the code below
 
 const s = prompt("Enter String:");
 alert(firstWord(s));
